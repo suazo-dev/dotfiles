@@ -90,3 +90,5 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(oh-my-posh init zsh --config ~/.cache/oh-my-posh/themes/zen.toml)"
 export PATH="$HOME/.local/bin:$PATH"
+echo 'if ! pgrep -x "code" > /dev/null; then if ! tmux has-session -t main 2>/dev/null; then tmux new-session -d -s main; fi; tmux attach -t main; fi' >> ~/.zshrc
+
